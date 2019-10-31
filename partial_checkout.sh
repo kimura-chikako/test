@@ -35,7 +35,6 @@ echo "Start:"  ${PROC_NAME} $@ | $LOG_CMD $LINENO
 
 readonly output_dir=$1
 readonly tagname=$2
-readonly commit_id=$(git rev-parse $tagname)
 
 # タグのコミット内容をチェックアウト
-git cherry-pick -n $commit_id | $LOG_CMD $LINENO
+git cherry-pick -n $2 | $LOG_CMD $LINENO
