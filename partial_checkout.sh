@@ -38,4 +38,4 @@ readonly tagname=$2
 readonly commit_id=$(git rev-parse $tagname)
 
 # タグのコミット内容をチェックアウト
-git cherry-pick $commit_id | $LOG_CMD $LINENO
+git cherry-pick -n $commit_id | $LOG_CMD $LINENO
